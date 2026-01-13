@@ -1,0 +1,3005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!---->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./solicitacao.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <title>Almoxarifado</title>
+</head>
+<body>
+    
+    <!--PARTE SUPERIORS DA TELA-->
+    <header id="cima">
+      <img src="./logo-empresa.jpg" alt="">
+        <div>
+            <!--<h1 class="s">ULTRA-X</h1>--><H1 class="a">SOLICITAÇÃO DE MERCADORIA</h1>
+            
+        </div>
+    </header>
+    <br>
+
+    <fieldset id="tabela1">
+
+            
+        
+            <label class="forma">EMPRESA</label>
+            <select id="unidade">
+                <option selected disabled value="">LOCAL......................</option>
+                <option>PONTO DE 01</option>
+                <option>PONTO DE 02</option>
+                <option>PONTO DE 03</option>
+            </select>
+            <script>
+                $(document).ready(function() {
+                    $('#unidade').select2();
+                });
+            </script>
+
+            <label class="forma">Desdobramento</label>
+            <select id="CC">
+                <option selected disabled value="">Selecione o Desdobramento Conforme seu Departamento................................</option>
+                <!--lista de centro de custo-->
+                <option>?????? - INFORME O DESDOBRAMENTO</option>
+                <option>1 - VENDAS</option>
+                <option>2 - COMERCIAL</option>
+                <option>3 - CONTROLADORIA</option>
+                <option>4 - FRENTE CAIXA</option>
+                <option>5 - ESTOQUE</option>
+                <option>6 - ADM -  GERAL</option>
+                <option>7 - T.I</option>
+                <option>8 - COMPRAS</option>
+                <option>9 - QUALIDADE</option>
+                <option>10 - R.H</option>
+
+                
+
+
+                <!--lista de centro de custo-->
+            </select>
+            <script>
+                $(document).ready(function() {
+                $('#CC').select2();
+                });
+                </script>
+            <br>
+            <form></form>
+            <label class="forma">Solicitante</label>
+            <input  id="desc" type="text" maxlength="50" size="57" placeholder="Nome do Solicitante" required >
+            <label class="forma">Tel./Ramal</label>
+            <input  id="desc" type="text" maxlength="50" size="20" placeholder="Telefone / Ramal" required >
+            <label class="forma">Obs:.</label>
+            <input  id="desc" type="text" maxlength="50" size="65" placeholder="Observação:" required >
+            <label class="forma" >Data</label>
+            <input id="data" type="date"  nome="fData"  required>
+
+           
+                <input id="imprimir" type="submit" value="SALVAR-PDF" onClick="window.print()"/>
+                </form>
+           
+            </fieldset>
+            <br>
+            <fieldset id="formdesc">
+            <div>
+                <h1 class="pedido">
+                <span class="quantidade">Quantidade</span>
+                <span class="descricao">Descrição</span>
+                <span class="obs">Obs / Lote</span>
+                </h1>
+            </div>
+            <br class="fixfloat">
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->
+            <input id="qt2" type="text" maxlength="8" size="5" placeholder="QT" autofocus><label></label>
+            <select class="solicitacao">
+                <option selected>.................................................................................................................................................................</option>
+                <!--lista de materiais-->
+                <option>1 - Arroz  (Mercado)</option>
+                <option>2 - Feijao  (Mercado)</option>
+                <option>3 - Macarrao  (Mercado)</option>
+                <option>4 - Farinha de trigo  (Mercado)</option>
+                <option>5 - Acucar  (Mercado)</option>
+                <option>6 - Sal  (Mercado)</option>
+                <option>7 - Oleo de soja  (Mercado)</option>
+                <option>8 - Azeite  (Mercado)</option>
+                <option>9 - Cafe  (Mercado)</option>
+                <option>10 - Leite  (Mercado)</option>
+                <option>11 - Leite em po  (Mercado)</option>
+                <option>12 - Achocolatado  (Mercado)</option>
+                <option>13 - Biscoito  (Mercado)</option>
+                <option>14 - Pao de forma  (Mercado)</option>
+                <option>15 - Pao frances  (Mercado)</option>
+                <option>16 - Ovos  (Mercado)</option>
+                <option>17 - Margarina  (Mercado)</option>
+                <option>18 - Manteiga  (Mercado)</option>
+                <option>19 - Queijo  (Mercado)</option>
+                <option>20 - Presunto  (Mercado)</option>
+                <option>21 - Iogurte  (Mercado)</option>
+                <option>22 - Carne bovina  (Mercado)</option>
+                <option>23 - Frango  (Mercado)</option>
+                <option>24 - Peixe  (Mercado)</option>
+                <option>25 - Salsicha  (Mercado)</option>
+                <option>26 - Linguica  (Mercado)</option>
+                <option>27 - Mortadela  (Mercado)</option>
+                <option>28 - Tomate  (Mercado)</option>
+                <option>29 - Cebola  (Mercado)</option>
+                <option>30 - Alho  (Mercado)</option>
+                <option>31 - Batata  (Mercado)</option>
+                <option>32 - Cenoura  (Mercado)</option>
+                <option>33 - Alface  (Mercado)</option>
+                <option>34 - Banana  (Mercado)</option>
+                <option>35 - Maca  (Mercado)</option>
+                <option>36 - Laranja  (Mercado)</option>
+                <option>37 - Limao  (Mercado)</option>
+                <option>38 - Mamao  (Mercado)</option>
+                <option>39 - Sabao em po  (Mercado)</option>
+                <option>40 - Amaciante  (Mercado)</option>
+                <option>41 - Detergente  (Mercado)</option>
+                <option>42 - Esponja  (Mercado)</option>
+                <option>43 - Sabao em barra  (Mercado)</option>
+                <option>44 - Agua sanitaria  (Mercado)</option>
+                <option>45 - Desinfetante  (Mercado)</option>
+                <option>46 - Papel higienico  (Mercado)</option>
+                <option>47 - Papel toalha  (Mercado)</option>
+                <option>48 - Guardanapo  (Mercado)</option>
+                <option>49 - Creme dental  (Mercado)</option>
+                <option>50 - Escova de dentes  (Mercado)</option>
+                <option>51 - Shampoo  (Mercado)</option>
+                <option>52 - Condicionador  (Mercado)</option>
+                <option>53 - Sabonete  (Mercado)</option>
+                <option>54 - Papel A4  (Papelaria)</option>
+                <option>55 - Papel A3  (Papelaria)</option>
+                <option>56 - Bloco de anotacoes  (Papelaria)</option>
+                <option>57 - Caderno  (Papelaria)</option>
+                <option>58 - Caderno universitario  (Papelaria)</option>
+                <option>59 - Agenda  (Papelaria)</option>
+                <option>60 - Envelope  (Papelaria)</option>
+                <option>61 - Pasta plastica  (Papelaria)</option>
+                <option>62 - Pasta suspensa  (Papelaria)</option>
+                <option>63 - Pasta sanfonada  (Papelaria)</option>
+                <option>64 - Clips  (Papelaria)</option>
+                <option>65 - Grampo  (Papelaria)</option>
+                <option>66 - Caixa de grampos  (Papelaria)</option>
+                <option>67 - Grampeador  (Papelaria)</option>
+                <option>68 - Perfurador  (Papelaria)</option>
+                <option>69 - Elastico  (Papelaria)</option>
+                <option>70 - Caneta esferografica azul  (Papelaria)</option>
+                <option>71 - Caneta esferografica preta  (Papelaria)</option>
+                <option>72 - Caneta esferografica vermelha  (Papelaria)</option>
+                <option>73 - Lapis  (Papelaria)</option>
+                <option>74 - Lapis de cor  (Papelaria)</option>
+                <option>75 - Borracha  (Papelaria)</option>
+                <option>76 - Apontador  (Papelaria)</option>
+                <option>77 - Marca-texto  (Papelaria)</option>
+                <option>78 - Corretivo  (Papelaria)</option>
+                <option>79 - Regua  (Papelaria)</option>
+                <option>80 - Tesoura  (Papelaria)</option>
+                <option>81 - Cola branca  (Papelaria)</option>
+                <option>82 - Cola bastao  (Papelaria)</option>
+                <option>83 - Fita adesiva  (Papelaria)</option>
+                <option>84 - Fita dupla face  (Papelaria)</option>
+                <option>85 - Calculadora  (Papelaria)</option>
+                <option>86 - Post-it  (Papelaria)</option>
+                <option>87 - Prancheta  (Papelaria)</option>
+                <option>88 - Mouse pad  (Papelaria)</option>
+                <option>89 - Pen drive  (Papelaria)</option>
+                <option>90 - Toner  (Papelaria)</option>
+                <option>91 - Cartucho de tinta  (Papelaria)</option>
+                <option>92 - Tubo PVC soldavel  (Construção)</option>
+                <option>93 - Tubo PVC roscavel  (Construção)</option>
+                <option>94 - Tubo PVC esgoto  (Construção)</option>
+                <option>95 - Tubo PPR  (Construção)</option>
+                <option>96 - Tubo PEAD  (Construção)</option>
+                <option>97 - Mangueira cristal  (Construção)</option>
+                <option>98 - Mangueira reforcada  (Construção)</option>
+                <option>99 - Joelho PVC 90  (Construção)</option>
+                <option>100 - Joelho PVC 45  (Construção)</option>
+                <option>101 - Curva PVC  (Construção)</option>
+                <option>102 - Te PVC  (Construção)</option>
+                <option>103 - Luva PVC  (Construção)</option>
+                <option>104 - Luva de correr  (Construção)</option>
+                <option>105 - Uniao PVC  (Construção)</option>
+                <option>106 - Adaptador soldavel  (Construção)</option>
+                <option>107 - Adaptador roscavel  (Construção)</option>
+                <option>108 - Reducao PVC  (Construção)</option>
+                <option>109 - Flange PVC  (Construção)</option>
+                <option>110 - Registro de esfera  (Construção)</option>
+                <option>111 - Registro de gaveta  (Construção)</option>
+                <option>112 - Valvula de retencao  (Construção)</option>
+                <option>113 - Valvula de descarga  (Construção)</option>
+                <option>114 - Caixa sifonada  (Construção)</option>
+                <option>115 - Sifao  (Construção)</option>
+                <option>116 - Ralo  (Construção)</option>
+                <option>117 - Grelha  (Construção)</option>
+                <option>118 - Torneira  (Construção)</option>
+                <option>119 - Torneira boia  (Construção)</option>
+                <option>120 - Engate flexivel  (Construção)</option>
+                <option>121 - Flexivel metalico  (Construção)</option>
+                <option>122 - Chuveiro  (Construção)</option>
+                <option>123 - Misturador  (Construção)</option>
+                <option>124 - Caixa dagua  (Construção)</option>
+                <option>125 - Boia para caixa dagua  (Construção)</option>
+                <option>126 - Cola para PVC  (Construção)</option>
+                <option>127 - Fita veda rosca  (Construção)</option>
+                <option>128 - Abracadeira  (Construção)</option>
+                <option>129 - Bracadeira metalica  (Construção)</option>
+                <option>130 - Cantoneira  (Construção)</option>
+                <option>131 - Perfil metalico  (Construção)</option>
+                <option>132 - Suporte metalico  (Construção)</option>
+                <option>133 - Parafuso  (Construção)</option>
+                <option>134 - Bucha  (Construção)</option>
+                <option>135 - Vedacao de borracha  (Construção)</option>
+            </select>
+            <input id="qt2" type="text" maxlength="8" size="20" placeholder="" autofocus><label></label>
+            <br>
+            <!--!!!!!!!!!!!!!!!!!!!Copiar as infomações da linha de baixo ate a proxima invormação!!!!!!!!!!!!!!!!!!!-->       
+           
+
+
+
+            <script>
+                $(document).ready(function() {
+                    $('.solicitacao').select2();
+                });
+            </script>
+            <br>
+        
+    
+
+    </fieldset>
+
+    <br>
+    <footer>
+    <p>RECEBIMENTO E ENTREGA DAS 8:00hs AS 18:00hs</p>   
+   </footer>
+
+   <footer>
+      <p>EM CASO DE DUVIDAS: COMPRAS - 9999 ESTOQUE 7777</p>
+   </footer>
+
+   <footer>
+    <p>NOME EMPRESA - Atualizado: 01/01/2000 - TESTE</p>
+ </footer>
+
+</body>
+</html>

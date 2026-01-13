@@ -1,0 +1,110 @@
+.fixfloat {
+  clear: both;
+}
+
+#cima img {
+  float: left;
+
+  width: 230px;
+  height: 38px;
+  margin-top: 30px;
+}
+body {
+  margin: auto;
+  width: 960px;
+}
+.pedido {
+  display: flex;               /* cria linha flexível */
+  justify-content: space-between; /* espalha os itens igualmente */
+  font-size: 20px;
+  font-weight: bold;
+}
+.quantidade {
+  flex: 2;   /* ocupa 1 parte */
+}
+.descricao {
+  flex: 2;   /* ocupa 3 partes */
+}
+.obs {
+  flex: 1; /* agora ocupa menos espaço, puxando para esquerda */
+}
+.s {
+  float: left;
+  font-size: 45px;
+  width: auto;
+  text-align: left;
+  height: 30px;
+  font-weight: bold; /*deixar a fonte em negrito*/
+}
+.a {
+  float: right;
+  width: 30 px;
+  font-weight: bold; /*deixar a fonte em negrito*/
+  padding: 15px 140px 0px 0px; /*separar escrita da lateral*/
+}
+
+#select {
+  height: 50px;
+}
+
+footer {
+  float: right;
+  color: #888;
+  border: #888 solid 2px; /*borda em volta da escrita*/
+  border-radius: 5px;
+}
+footer p {
+  display: inline-block; /*tira a formatação de bloco e coloca em linha separada*/
+  /*caso queira deixa linha reta um apos o outro deixa apenas o "inline" (display:inline-block;)*/
+  width: 316px;
+  text-align: center;
+}
+#qt2 {
+  height: 24px;
+  border-radius: 5px;
+  border: #888 solid 1px; /*borda em volta da escrita*/
+  text-align: center;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+#desc,
+#data {
+  height: 25px;
+  border-radius: 5px;
+  border: #888 solid 1px; /*borda em volta da escrita*/
+  text-align: left;
+  font-size: 15px;
+  margin: 5px;
+}
+#formdesc {
+  border: #000 solid 2px; /*borda em volta da escrita*/
+  border-radius: 5px;
+}
+
+#tabela2 {
+  border-radius: 5px;
+}
+#tabela1 {
+  border: #000 solid 2px; /*borda em volta da escrita*/
+  border-radius: 5px;
+}
+.forma {
+  font-weight: bold; /*deixar a fonte em negrito*/
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.solicitacao {
+  size: 60px;
+}
+#imprimir {
+  height: 30px;
+  border-radius: 5px;
+  font-weight: bold; /*deixar a fonte em negrito*/
+  cursor: pointer; /*mudar curos "mouse" como se fosse link*/
+}
+
+#imprimir:hover {
+  background-color: #888;
+  color: #fff;
+}
