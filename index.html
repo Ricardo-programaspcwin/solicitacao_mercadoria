@@ -56,9 +56,9 @@
         const usuario = document.getElementById("usuario").value;
         const senha = document.getElementById("senha").value;
 
-        if (usuario === "admin" && senha === "123") {
-          alert("Login realizado com sucesso!");
-        } else {
+          if (usuario === "admin" && senha === "123") {
+              window.location.href = "dashboard.html";
+          } else {
           document.getElementById("mensagem").innerText =
             "Usuário ou senha inválidos";
         }
@@ -66,3 +66,4 @@
     </script>
   </body>
 </html>
+
